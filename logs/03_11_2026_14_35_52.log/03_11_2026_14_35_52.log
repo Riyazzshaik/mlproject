@@ -1,0 +1,150 @@
+[ 2026-03-11 14:35:54,388 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.44:5000
+[ 2026-03-11 14:35:54,389 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2026-03-11 14:36:57,729 ] 875 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\app.py", line 18, in predict_datapoint
+    return render_template('home.html')
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\templates\home.html", line 37, in top-level template code
+    <option value="male" {% if form_data.gender=='male' %}selected{% endif %}>Male</option>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form_data' is undefined
+[ 2026-03-11 14:36:57,743 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:36:57] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2026-03-11 14:36:58,986 ] 875 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\app.py", line 18, in predict_datapoint
+    return render_template('home.html')
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\templates\home.html", line 37, in top-level template code
+    <option value="male" {% if form_data.gender=='male' %}selected{% endif %}>Male</option>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form_data' is undefined
+[ 2026-03-11 14:36:58,992 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:36:58] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2026-03-11 14:37:01,656 ] 875 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\app.py", line 18, in predict_datapoint
+    return render_template('home.html')
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\templates\home.html", line 37, in top-level template code
+    <option value="male" {% if form_data.gender=='male' %}selected{% endif %}>Male</option>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form_data' is undefined
+[ 2026-03-11 14:37:01,661 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:37:01] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2026-03-11 14:37:02,422 ] 875 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\app.py", line 18, in predict_datapoint
+    return render_template('home.html')
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\templates\home.html", line 37, in top-level template code
+    <option value="male" {% if form_data.gender=='male' %}selected{% endif %}>Male</option>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form_data' is undefined
+[ 2026-03-11 14:37:02,425 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:37:02] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -
+[ 2026-03-11 14:37:02,561 ] 875 app - ERROR - Exception on /predictdata [GET]
+Traceback (most recent call last):
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\app.py", line 18, in predict_datapoint
+    return render_template('home.html')
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\templates\home.html", line 37, in top-level template code
+    <option value="male" {% if form_data.gender=='male' %}selected{% endif %}>Male</option>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Riyaz\OneDrive\Desktop\mlproject\.venv-1\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form_data' is undefined
+[ 2026-03-11 14:37:02,564 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:37:02] "[35m[1mGET /predictdata HTTP/1.1[0m" 500 -

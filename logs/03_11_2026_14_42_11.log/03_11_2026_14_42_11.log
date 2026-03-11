@@ -1,0 +1,16 @@
+[ 2026-03-11 14:42:13,591 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.44:5000
+[ 2026-03-11 14:42:13,591 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2026-03-11 14:42:47,390 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:42:47] "GET /predictdata HTTP/1.1" 200 -
+[ 2026-03-11 14:42:47,478 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:42:47] "GET /static/style.css HTTP/1.1" 200 -
+[ 2026-03-11 14:43:07,290 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:07] "POST /predictdata HTTP/1.1" 200 -
+[ 2026-03-11 14:43:07,312 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2026-03-11 14:43:21,354 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:21] "POST /predictdata HTTP/1.1" 200 -
+[ 2026-03-11 14:43:21,383 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2026-03-11 14:43:28,437 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2026-03-11 14:43:28,480 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[ 2026-03-11 14:43:49,780 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:49] "POST /predictdata HTTP/1.1" 200 -
+[ 2026-03-11 14:43:49,818 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[ 2026-03-11 14:43:49,837 ] 97 werkzeug - INFO - 127.0.0.1 - - [11/Mar/2026 14:43:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
