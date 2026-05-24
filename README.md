@@ -94,3 +94,19 @@ Student_performance_prediction/
 ├── app.py
 ├── requirements.txt
 └── setup.py
+📈 Future Improvements
+User Authentication
+Prediction History
+Dashboard Analytics
+Docker Support
+FastAPI Migration
+CI/CD Pipeline
+👨‍💻 Developed By
+
+Shaik Riyaz
+
+GitHub: https://github.com/Riyazzshaik
+LinkedIn: https://www.linkedin.com
+⭐ If you like this project
+
+Give this repository a star ⭐
