@@ -2,23 +2,23 @@ from flask import Flask, request, render_template
 
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
 
-
 app = Flask(__name__)
 
 
+# Home Route
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 
-@app.route('/predictdata', methods=['GET','POST'])
+# Prediction Route
+@app.route('/predictdata', methods=['GET', 'POST'])
 def predict_datapoint():
 
     if request.method == 'GET':
         return render_template('home.html')
 
-    else:
-
+    try:
         form_data = request.form
 
         data = CustomData(
@@ -35,7 +35,7 @@ def predict_datapoint():
 
         predict_pipeline = PredictPipeline()
 
-        result = round(predict_pipeline.predict(pred_df)[0],2)
+        result = round(predict_pipeline.predict(pred_df)[0], 2)
 
         return render_template(
             'home.html',
@@ -43,6 +43,12 @@ def predict_datapoint():
             form_data=form_data
         )
 
+    except Exception as e:
+        return render_template(
+            'home.html',
+            results=f"Error: {str(e)}"
+        )
+
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
